@@ -17,12 +17,10 @@ object CheckoutKataApp extends App{
   )
 
   // Adding items to shopping list
-  val shoppingList1 = new ShoppingCart()
-  shoppingList1.add(A)
-  shoppingList1.add(B)
-  shoppingList1.add(B)
+  val shoppingList1 = new ShoppingCart(Map.empty)
+  val newShoppingList = shoppingList1.add(A).add(B).add(B)
 
 //  shoppingList1.calcTotal
-  shoppingList1.printPretty // print pretty shopping list and the total
+  newShoppingList.printPretty // print pretty shopping list and the total
 
 }
